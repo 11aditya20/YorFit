@@ -1,0 +1,21 @@
+/* Custom Clothes */
+.custom-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .option {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    flex: 1;
+    min-width: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .option:hover {
+    transform: scale(1.05);
+  }

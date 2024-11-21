@@ -1,0 +1,19 @@
+/* Shop by Category */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  
+  .category-item {
+    background-color: #ff7e5f;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .category-item:hover {
+    transform: scale(1.05);
+  }

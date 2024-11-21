@@ -1,0 +1,102 @@
+/* Header */
+header {
+  color: black;
+  position: fixed; /* Fixes the header to the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensures the header spans the full width */
+  /* color: #fff; */
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(100px); /* Applies the blur effect to content behind the header */
+  z-index: 1000; /* Ensures the header stays on top of other content */
+}
+
+/* Navigation */
+nav {
+  color: black; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+
+/* Logo */
+.logo1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: inline-block;
+}
+.logo2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #645bff;
+  display: inline-block;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  /* font-weight: bold; */
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #645bff;
+}
+
+.cart{
+  display: flex;
+}
+
+/* Cart Icon */
+.cart img {
+  margin-right: 20px;
+  width: 24px;
+  /* filter: invert(1); */
+}
+
+.cart {
+  position: relative;
+}
+
+.user-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-menu p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.user-menu .email {
+  color: green; /* Only apply green color to the email */
+}
+
+.user-menu button {
+  margin-top: 10px;
+  background-color: #645bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.user-menu button:hover {
+  background-color: #241db1;
+}
