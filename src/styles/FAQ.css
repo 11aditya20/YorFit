@@ -4,7 +4,8 @@
     text-align: center;
   }
   
-  h2{
+  .heading{
+    margin-bottom: 30px;  
     color: black;
   }
 

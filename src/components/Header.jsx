@@ -16,12 +16,20 @@ function Header() {
           </Link>
         </div>
 
-        <ul className="nav-links">
+        <ul className="nav-links flex items-center">
           <li><Link to="/men">Men</Link></li>
           <li><Link to="/women">Women</Link></li>
           <li><Link to="/howitworks">How it Works</Link></li>
           <li><Link to="/aboutus">About Us</Link></li>
-          <li><Link to="/getfit">Get Fit</Link></li>
+          <li><Link to={"/getfit"}>
+                <button
+                  type="button"
+                  className="flex items-center justify-center px-3 py-1 text-white text-md font-medium rounded-md bg-custom-purple shadow-lg hover:bg-black"
+                >
+                  Get Fit
+                </button>
+              </Link>
+          </li>
         </ul>
 
         <div className="cart">
