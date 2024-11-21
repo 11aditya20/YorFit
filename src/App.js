@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AuthProvider, useAuth } from "./context/AuthContext";
-import SignIn from "./components/SignIn";
-import SignUp from "./components/SignUp";
+
 import Header from './components/Header';
 import Hero from './components/Hero';
 import CustomClothes from './components/CustomClothes';
@@ -12,65 +10,43 @@ import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import HowItWorks from './components/HowItWorks';
-
+import GetFit from './components/GetFit';
+import ProductDetails from './components/ProductDetails';
+import Men from './components/Men';
+import Women from './components/Women';
+import AboutUs from './components/AboutUs';
 import './App.css';
 
 function App() {
   return (
     <Router>
-      <AuthProvider>
-        <AppWithAuth />
-      </AuthProvider>
-    </Router>
-  );
-}
-
-function AppWithAuth() {
-  const { isAuthenticated } = useAuth(); // Access authentication status
-  const [isSignUp, setIsSignUp] = useState(false); // Manage which page is displayed (SignIn or SignUp)
-
-  const toggleSignInSignUp = () => {
-    setIsSignUp(!isSignUp); // Toggle between SignIn and SignUp
-  };
-
-  return (
-    <div className="App">
-      {isAuthenticated && <Header />} {/* Only show Header if authenticated */}
-
-      <Routes>
-        <Route
-          path="/"
-          element={isSignUp ? (
-            <SignUp onSwitch={toggleSignInSignUp} /> // Show SignUp if isSignUp is true
-          ) : (
-            <SignIn onSwitch={toggleSignInSignUp} /> // Show SignIn if isSignUp is false
-          )}
-        />
-        <Route
-          path="/landing"
-          element={
-            isAuthenticated ? (
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route
+            path="/"
+            element={
               <>
                 <Hero />
-                <RemakesReturns />
-                <Testimonials />
                 <CustomClothes />
                 <ShopCategory />
+                <RemakesReturns />
+                {/* <TopSellers /> */}
+                <Testimonials />
                 <FAQ />
               </>
-            ) : (
-              <SignIn /> // If not authenticated, show SignIn page
-            )
-          }
-        />
-        <Route
-          path="/landing/howitworks/"
-          element={<HowItWorks />}
-        />
-      </Routes>
-  
-      <Footer />
-    </div>
+            }
+          />
+          <Route path="/howitworks" element={<HowItWorks />} />
+          <Route path="/getfit" element={<GetFit />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/men" element={<Men />} />
+          <Route path="/women" element={<Women />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

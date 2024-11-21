@@ -28,7 +28,7 @@ function FAQ() {
 
   return (
     <section className="faq">
-      <h2>Frequently Asked Questions</h2>
+      <h2 className='text-black' >Frequently Asked Questions</h2>
       {faqs.map((faq, index) => (
         <div
           key={index}

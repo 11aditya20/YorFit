@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../styles/Hero.css';
 
 
@@ -59,16 +60,20 @@ function Hero() {
           <h1>Your Perfect Fit, Just a Tap Away</h1>
           <p>Achieve custom clothing tailored to you with the power of your phone and our cutting-edge tech.</p>
           <div className="hero-buttons">
+            <Link to={"/getfit"} >
             <button>Order Your Custom Fit
               <div className="arrow-wrapper">
                 <div className="arrow"></div>
               </div>
             </button>
+            </Link>
+            <Link to={"/aboutus"} >
             <button>Learn More
               <div className="arrow-wrapper">
                 <div className="arrow"></div>
               </div>
             </button>
+            </Link>
           </div>
         </div>
         <button className="slider-button prev" onClick={handlePrevClick}>❮</button>

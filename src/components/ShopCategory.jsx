@@ -1,42 +1,44 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const products = [
   {
     id: 1,
-    name: 'Basic Tee',
+    name: 'Shirt',
     href: '#',
-    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-02.jpg',
+    imageSrc: '/images/fullshirt.jpg',
     imageAlt: "Front of men's Basic Tee in black.",
-    price: '$35',
-    color: 'Black',
+    price: '₹650',
+    color: 'Dark Green',
   },
   {
     id: 2,
-    name: 'Basic Tee',
+    name: 'Half Shirt',
     href: '#',
-    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-02.jpg',
+    imageSrc: '/images/halfshirt.jpg',
     imageAlt: "Front of men's Basic Tee in black.",
-    price: '$30',
+    price: '₹499',
     color: 'Aspen White',
-  },{
-    id: 3,
-    name: 'Basic Tee',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-03.jpg',
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: '$35',
-    color: 'Charcoal',
-  },{
-    id: 4,
-    name: 'Artwork Tee',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-04.jpg',
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: '$33',
-    color: 'Iso Dots',
   },
-  // More products...
-]
+  {
+    id: 3,
+    name: 'Hoodie',
+    href: '#',
+    imageSrc: '/images/hoodie.jpg',
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: '₹870',
+    color: 'Dark Pink',
+  },
+  {
+    id: 4,
+    name: 'Top',
+    href: '#',
+    imageSrc: '/images/girlstop.jpg',
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: '₹745',
+    color: 'Maroon',
+  },
+];
 
 function ShopCategory() {
   return (
@@ -48,19 +50,21 @@ function ShopCategory() {
           {products.map((product) => (
             <div key={product.id} className="group relative">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                <img
-                  alt={product.imageAlt}
-                  src={product.imageSrc}
-                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-                />
+                <Link to={`/product/${product.id}`} state={product}>
+                  <img
+                    alt={product.imageAlt}
+                    src={product.imageSrc}
+                    className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                  />
+                </Link>
               </div>
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">
-                    <a href={product.href}>
+                    <Link to={`/product/${product.id}`} state={product}>
                       <span aria-hidden="true" className="absolute inset-0" />
                       {product.name}
-                    </a>
+                    </Link>
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                 </div>
@@ -71,7 +75,7 @@ function ShopCategory() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default ShopCategory;

@@ -21,7 +21,7 @@ function HowItWorks() {
         <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 class="title-font sm:text-5xl text-3xl mb-4 font-medium text-custom-purple">Does it really work?
           </h1>
-          <h2 class="sm:text-3xl text-2xl font-small">20% More Accurate Than A Tailor</h2>
+          <h2 class="sm:text-3xl text-2xl text-black font-small">20% More Accurate Than A Tailor</h2>
           <p class="mb-8 text-2xl leading-relaxed">We brought in 4 professional tailors and 35 people, and we went head to head against them taking body measurements.<br></br> We came out 20% better!
 
 Our unique measurement app takes 60 measurements across your whole body to ensure that every piece of clothing is a perfect fit.</p>
@@ -50,7 +50,7 @@ Our unique measurement app takes 60 measurements across your whole body to ensur
     <section>
       <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h2 class="sm:text-3xl text-2xl font-small">Record Your Video</h2>
+          <h2 class="sm:text-3xl text-2xl text-black font-small">Record Your Video</h2>
           <p class="mb-8 text-1xl leading-relaxed">Put your phone down, step back 6 feet and turn around once. It takes less than 15 seconds!</p>
           <div class="flex justify-center">
 
@@ -66,7 +66,7 @@ Our unique measurement app takes 60 measurements across your whole body to ensur
     <section>
       <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h2 class="sm:text-3xl text-2xl font-small">Capture Your 3D Point Cloud</h2>
+          <h2 class="sm:text-3xl text-2xl text-black font-small">Capture Your 3D Point Cloud</h2>
           <p class="mb-8 text-1xl leading-relaxed">Our technology captures your 3D Point Cloud to accurately size your clothes.</p>
           <div class="flex justify-center">
 
@@ -91,7 +91,7 @@ Our unique measurement app takes 60 measurements across your whole body to ensur
     <section>
       <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h2 class="sm:text-3xl text-2xl font-small">3D Scan Finalized & Measurements Created</h2>
+          <h2 class="sm:text-3xl text-2xl text-black font-small">3D Scan Finalized & Measurements Created</h2>
           <p class="mb-8 text-1xl leading-relaxed">Our system can then calculate 60 measurements to ensure your clothes fit you perfectly.</p>
           <div class="flex justify-center">
 
